@@ -1,0 +1,27 @@
+<p>
+  orderslist works!
+</p>
+<!-- id: 1,
+            name: 'Basketball',
+            price: 29.99 -->
+
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Old Price</th>
+                  <th scope="col">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let order of orders">
+                  <th scope="row">{{order.id}}</th>
+                  <td>{{order.name}}</td>
+                  <td>{{order.price}}</td>
+                  <td>{{order.oldprice}}</td>
+                  <td>{{order | pricePercentage | percent}}</td>
+                </tr>
+              </tbody>
+            </table>
